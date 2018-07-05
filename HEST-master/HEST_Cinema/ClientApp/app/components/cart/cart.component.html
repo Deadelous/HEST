@@ -1,0 +1,26 @@
+﻿<div class="row align-center">
+    <h1>MovieCart</h1>
+</div>
+
+<div *ngFor="let movie of myCart">
+     <div class="row align-bottom cart">
+         <div class="medium-6 columns"> {{movie.title}}</div>
+         <div class="medium-3 columns"> euro{{movie.price}}</div>
+         <div class="medium-3 columns">
+             <button type="button" class="alert button"(click)="removeCart(movie.id)">
+                     Remove item from moviecart
+             </button>
+         </div>
+     </div>
+</div>
+
+<div class="row align-bottom space">
+    <div class="medium-1 medium-offset-6 columns cart"> Total</div>
+    <div class="medium-5 cart"> {{cartTotal}}</div>
+</div>
+
+<div class="expanded button-group space">
+    <a class="success button" (click)="purchase()">Checkout</a>
+    <a class="alert button" (click)="cancel()">Cancel</a>
+</div>
+    

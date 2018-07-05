@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+}
+
+#body {
+    padding:10px;
+    padding-bottom:60px;   
+}
+
+#container {
+    min-height:100%;
+    position:relative;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+    .body-content {
+        padding-top: 50px;
+    }
+}

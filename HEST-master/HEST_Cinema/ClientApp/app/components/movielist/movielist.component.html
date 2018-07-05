@@ -1,0 +1,31 @@
+<div>
+    <div class="form-group">
+        <input placeholder="Enter Movie Name" class="form-control input-lg" type="text" #searchMovie
+               (keyup)="0">
+        <div *ngFor="let movie of movies | search:searchMovie.value;let serial = index"></div>
+
+        <h1 class="text-center">Movies of HEST-Cinema</h1>
+        <div>
+            <div>
+                <div *ngFor="let movie of movies" class=" .movie-list-item" [routerLink]="['/moviedetail', movie.id]">
+                    <div>
+                        <div width="175" height="100">
+                            <img [src]="movie.poster" width="175" height="100">
+                        </div>
+                    </div>
+                    <h4><a [routerLink]="['/moviedetail', movie.id]">{{movie.title}}</a> </h4>
+                    <span class="badge">{{movie.rating}}</span>
+                    <div>
+                        {{movie.description}}
+                    </div>
+                    <div>
+                        Released: {{movie.releasedate}}
+                    </div>
+                    <div>
+                        Genre: {{movie.genre}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

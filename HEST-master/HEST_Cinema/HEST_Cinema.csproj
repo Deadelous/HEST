@@ -1,0 +1,147 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <ApplicationIcon />
+    <OutputType>WinExe</OutputType>
+    <StartupObject />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.TypeScript.Compiler" Version="2.6.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
+    <PackageReference Include="Typescript.Compiler" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
+    <Compile Remove="ClientApp\app\components\moviecartservice\**" />
+    <Compile Remove="ClientApp\app\components\reservation\**" />
+    <Compile Remove="ClientApp\app\components\screeninglist\**" />
+    <Content Remove="ClientApp\**" />
+    <EmbeddedResource Remove="ClientApp\app\components\moviecartservice\**" />
+    <EmbeddedResource Remove="ClientApp\app\components\reservation\**" />
+    <EmbeddedResource Remove="ClientApp\app\components\screeninglist\**" />
+    <None Remove="ClientApp\app\components\moviecartservice\**" />
+    <None Remove="ClientApp\app\components\reservation\**" />
+    <None Remove="ClientApp\app\components\screeninglist\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\app\components\alert\alert.component.ts" />
+    <None Remove="ClientApp\app\components\app\index.ts" />
+    <None Remove="ClientApp\app\components\auth\alert.service.ts" />
+    <None Remove="ClientApp\app\components\auth\auth-guard.service.component.ts" />
+    <None Remove="ClientApp\app\components\auth\auth0-variables.ts" />
+    <None Remove="ClientApp\app\components\auth\authentication.service.ts" />
+    <None Remove="ClientApp\app\components\auth\index.ts" />
+    <None Remove="ClientApp\app\components\auth\user.service.component.ts" />
+    <None Remove="ClientApp\app\components\cart\cart.component.ts" />
+    <None Remove="ClientApp\app\components\contact\contact.component.ts" />
+    <None Remove="ClientApp\app\components\credit\credit.component.ts" />
+    <None Remove="ClientApp\app\components\edit\edit.component.ts" />
+    <None Remove="ClientApp\app\components\footer\footer.component.ts" />
+    <None Remove="ClientApp\app\components\footer\index.ts" />
+    <None Remove="ClientApp\app\components\home\index.ts" />
+    <None Remove="ClientApp\app\components\login\index.ts" />
+    <None Remove="ClientApp\app\components\login\login.component.ts" />
+    <None Remove="ClientApp\app\components\movieservice\moviesearchpipe.ts" />
+    <None Remove="ClientApp\app\components\movieservice\storageservice.component.ts" />
+    <None Remove="ClientApp\app\components\reviewpage\index.ts" />
+    <None Remove="ClientApp\app\components\movieservice\moviepipe.ts" />
+    <None Remove="ClientApp\app\components\movieservice\movieservice.ts" />
+    <None Remove="ClientApp\app\components\navmenu\index.ts" />
+    <None Remove="ClientApp\app\components\profile\index.ts" />
+    <None Remove="ClientApp\app\components\profile\profile.component.ts" />
+    <None Remove="ClientApp\app\components\register\index.ts" />
+    <None Remove="ClientApp\app\components\register\register.component.ts" />
+    <None Remove="ClientApp\app\components\Typescriptmodels\index.ts" />
+    <None Remove="ClientApp\app\components\Typescriptmodels\movie.component.ts" />
+    <None Remove="ClientApp\app\components\Typescriptmodels\review.component.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HEST-Cinema-Tests\HEST-Cinema-Tests.csproj" />
+    <ProjectReference Include="..\InterfacesRepoProject\InterfacesRepoProject.csproj" />
+    <ProjectReference Include="..\ModelLibary\ModelLibary.csproj" />
+    <ProjectReference Include="..\MSSQLContextclasses\MSSQLContextclasses.csproj" />
+    <ProjectReference Include="..\RepositoriesProject\RepositoriesProject.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\alert\alert.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\app\index.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\auth\alert.service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\auth\auth-guard.service.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\auth\auth0-variables.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\auth\authentication.service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\auth\index.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\auth\user.service.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\cart\cart.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\contact\contact.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\credit\credit.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\edit\edit.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\footer\footer.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\footer\index.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\home\index.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\login\index.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\login\login.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\movieservice\moviesearchpipe.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\movieservice\storageservice.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\reviewpage\index.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\reviewpage\reviewpage.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\movieservice\moviepipe.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\movieservice\movieservice.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\navmenu\index.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\profile\index.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\profile\profile.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\register\index.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\register\register.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\Typescriptmodels\cartitem.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\Typescriptmodels\index.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\Typescriptmodels\movie.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\Typescriptmodels\account.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\Typescriptmodels\review.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\Typescriptmodels\moviecart.component.ts" />
+  </ItemGroup>
+
+  <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+
+    <!-- In development, the dist files won't exist on the first run or when cloning to
+         a different machine, so rebuild them if not already present. -->
+    <Message Importance="high" Text="Performing first-run Webpack build..." />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec Command="npm install" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env.prod" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --env.prod" />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="wwwroot\dist\**; ClientApp\dist\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+</Project>

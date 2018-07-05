@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InterfacesRepoProject\InterfacesRepoProject.csproj" />
+    <ProjectReference Include="..\ModelLibary\ModelLibary.csproj" />
+    <ProjectReference Include="..\MSSQLContextclasses\MSSQLContextclasses.csproj" />
+  </ItemGroup>
+
+</Project>

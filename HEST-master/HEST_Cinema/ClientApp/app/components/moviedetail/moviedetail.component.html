@@ -1,0 +1,45 @@
+<div >
+    <h1> {{movie.title}}</h1>
+    <div class="row">
+        <div class="col-xs-5">
+            <img [src]="movie.poster" width="700" height="700">
+        </div>
+        <div class="col-xs-7">
+
+            <table class="table">
+                <tr>
+                    <td><strong>Plot</strong></td>
+                    <td>{{movie.description}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Director</strong></td>
+                    <td>{{movie.director}} </td>
+                </tr>
+                <tr>
+                    <td><strong>Price of Movie</strong></td>
+                    <td> Euro = {{movie.price}}</td>
+                </tr>
+                <tr>
+                    <td><strong>IMDB Rating</strong></td>
+                    <td>{{movie.rating}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Genre</strong></td>
+                    <td>{{movie.genre}}</td>
+                </tr>
+            </table>
+            <div>
+                <iframe width="800" height="400"
+                        [src]='sanitizer.bypassSecurityTrustResourceUrl(movie.trailer)'>
+                </iframe>
+            </div>
+            <div class="row">
+                <div class=buttons>
+                    <a class="btn btn-primary" [routerLink]="['/home']">Back to Home</a>
+                    <a class="btn btn-primary" [routerLink]="['/movielist']">Back to Movielist</a>
+                    <a class="btn btn-primary" (click)="addMovie(movie.id, movie.title, movie.price)" >Add to MovieCart</a>
+                </div>
+            </div>>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<div class='main-nav'>
+    <div class='navbar navbar-inverse' ng-controller="loginController">
+        <div class="container-fluid">
+            <div class='navbar-header'>
+                <a class="navbar-brand" href="#" style="width:200px">HEST {{accountdetails.firstName}}</a>
+            </div>
+            <div class='navbar-collapse collapse'>
+                <ul class='nav navbar-nav'>
+                    <li [routerLinkActive]="['link-active']">
+                        <a [routerLink]="['/home']">
+                            <span class='glyphicon glyphicon-home'></span> Home
+                        </a>
+                    </li>
+                    <li [routerLinkActive]="['link-active']">
+                        <a [routerLink]="['/movielist']">
+                            <span class='glyphicon glyphicon-th-list'></span> Movies
+                        </a>
+                    </li>
+                    <li [routerLinkActive]="['link-active']">
+                        <a [routerLink]="['/profile']">
+                            <span class='glyphicon glyphicon-th-list'></span> Profile
+                        </a>
+                    </li>
+                    <li [routerLinkActive]="['link-active']">
+                        <a [routerLink]="['/login']" ng-show="isUserLoggedIn">
+                            <span class='glyphicon glyphicon-th-list'></span> Login
+                        </a>
+                    </li>
+                    <li [routerLinkActive]="['link-active']">
+                        <a [routerLink]="['/reviewpage']">
+                            <span class='glyphicon glyphicon-th-list'></span> Reviewpage
+                        </a>
+                    </li>
+                    <li [routerLinkActive]="['link-active']">
+                        <a [routerLink]="['/audit']">
+                            <span class='glyphicon glyphicon-th-list'></span> Reservation
+                        </a>
+                    </li>
+                    <li [routerLinkActive]="['link-active']">
+                        <a [routerLink]="['/cart']">
+                            <span class='glyphicon glyphicon-th-list'></span> MovieCart
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+﻿
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+    <h1 class="text-center">Reviews of HEST-Cinema</h1>
+
+    <div *ngFor="let review of reviews">
+        <div>{{review.date}} + {{review.movietitle}}</div>
+        <div>{{ review.name }} {{review.description}} {{review.rating}}</div>
+    </div>
+</div>
